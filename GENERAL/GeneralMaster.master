@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="GeneralMaster.master.cs" Inherits="GENERAL_GeneralMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../CSS/GeneralCSS.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <div id="Container">
+           <div id="topmost"></div>
+           <div id="top">
+               <div id="logo">
+                   <img src="../IMAGES/logo.PNG" class="logoimg"/></div>
+               <div id="menu">
+                   <div  id="myTopnav" class="topnav">
+                      <a href="GeneralHome.aspx">Home</a>
+                      <a href="Registration.aspx">Register</a>
+                      <a href="Enquiry.aspx">Enquiry</a>
+                       <a href="Login.aspx">Login</a>
+                      <a href="#contact">Contact Us</a>
+
+                    </div>
+               </div>
+           </div>
+           <div id="navigation">
+               <asp:ContentPlaceHolder ID="CPHnavigation" runat="server"></asp:ContentPlaceHolder>
+           </div>
+           <div id="main"><asp:ContentPlaceHolder ID="CPHmain" runat="server"></asp:ContentPlaceHolder>
+           </div>
+           <div id="footer">
+               <div class="block">
+                   
+               </div>
+           </div>
+       </div>
+        
+    </form>
+</body>
+</html>

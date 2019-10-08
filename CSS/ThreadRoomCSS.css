@@ -1,0 +1,130 @@
+﻿.MainPanel {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color:white;
+}
+
+.panel1 {
+    line-height: 30px;
+    height: 150px;
+    background-color: lightseagreen;
+    border-style: solid;
+    border-width: 4px;
+    border-color: black;
+    border-bottom-color: white;
+}
+
+.panel2 {
+    line-height: 30px;
+    border-style: solid;
+    border-color:black;
+    border-width: 3px;
+    border-top-color: white;
+}
+
+.reply{
+    border-color:black;
+    border-style:solid;
+    border-width:3px;
+    min-height:150px;
+    border-bottom:none;
+    border-top:none;
+}
+
+
+
+.quesdiv
+{
+    width:33.3%;
+    background-color:black;
+    float:left;
+}
+
+.userNameDiv {
+    width:33.3%;
+    float:right;
+    background-color:white;
+    font-weight:bolder;
+}
+
+.quesDiv {
+    width:100%;
+    float:left;
+    margin-top:10px;
+}
+
+.countDiv{
+    min-width:15%;
+    margin-top:10px;
+    float:left;
+    font-size:20px;
+    font-family:'Times New Roman';
+    background-color:black;
+    color:white;
+}
+
+.replybtnDiv{
+    float:right;
+    margin-right:20px;
+} 
+
+
+.textDiv {
+    width: 40%;
+    float: left;
+}
+
+.buttonDiv {
+    float:right;
+    margin-top:60px;
+    margin-right:275px;
+}
+
+.threadlbl {
+    font-family: 'Monotype Corsiva';
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin-top: 5px;
+}
+
+.threadtxt {
+    font-family:'Monotype Corsiva';
+    font-size: 30px;
+    color:white;
+}
+
+.qtxt{
+    font-size:22px;
+    font-weight:lighter;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:blue;
+    background-color:white;
+}
+
+.replybtn {
+    padding: 5px 5px 5px 5px;
+    background-color: ButtonFace;
+    color: ButtonText;
+    font-weight: bold;
+    font-size: 17px;
+    width: 170px;
+    height: 40px;
+}
+
+
+.textbox {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.post{
+    margin-left:55px;
+    padding: 5px 5px 5px 5px;
+    background-color:ButtonFace;
+    color:ButtonText;
+    font-weight:bold;
+    font-size:17px;
+    width:170px;
+    height:40px;
+}

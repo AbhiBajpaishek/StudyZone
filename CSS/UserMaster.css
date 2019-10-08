@@ -1,0 +1,214 @@
+﻿#Outer
+{
+    width:100%;
+    min-height:700px;
+}
+
+#Panel
+{
+    width:100%;
+    min-height:700px;
+    background-color:floralwhite;
+}
+#Menupanel
+{
+    width:325px;
+    min-height:600px;
+    font-size:25px;
+    float:left;
+    background-color:#323945;
+}
+#webname
+{
+    height:35px;
+    padding:20px;
+    color:#64bc62;
+    font-family:'Arial Rounded MT';
+    text-align:center;
+    
+
+}
+#Profile
+{
+   
+   height:100px;
+   border-top:1px solid #64bc62;
+   border-bottom:1px solid #64bc62;
+
+}
+#profilepic
+{
+    width:25%;
+    height:80px;
+    float:left;
+    padding:10px;
+}
+#profilepic img
+{
+    height:80px;
+    width:80px;
+    border-radius:50%;
+}
+#adminname
+{
+    height:80px;
+    width:203px;
+    float:left;
+    padding:10px;
+    line-height:80px;
+    color:white;
+    font-size:22px;
+    font-family:'Arial Rounded MT';
+}
+#Menu
+{
+    
+    margin-top:20px;
+    height:600px;
+    width:100%;
+}
+#first 
+{
+  font-family:'Arial Rounded MT';
+  display: block;
+  padding-bottom:10px;
+  font-size: 20px;
+  border-bottom:1px solid rgb(128, 128, 128);
+  text-decoration:none;
+  padding-left:10px;
+  color: #fff;
+}
+#first a
+{
+    text-decoration:none;
+  color: #fff;
+}
+#second 
+{
+  font-family:'Arial Rounded MT';
+  display: block;
+  padding-bottom:10px;
+  font-size: 20px;
+  border-bottom:1px solid rgb(128, 128, 128);
+  text-decoration:none;
+  padding-left:10px;
+  color: #fff;
+}
+#second a
+{
+    text-decoration:none;
+  color: #fff;
+}
+#third
+{
+  font-family:'Arial Rounded MT';
+  display: block;
+  padding-bottom:10px;
+  font-size: 20px;
+  border-bottom:1px solid rgb(128, 128, 128);
+  text-decoration:none;
+  padding-left:10px;
+  color: #fff;
+}
+#third a
+{
+    text-decoration:none;
+  color: #fff;
+}
+#fourth 
+{
+  font-family:'Arial Rounded MT';
+  display: block;
+  padding-bottom:10px;
+  font-size: 20px;
+  border-bottom:1px solid rgb(128, 128, 128);
+  text-decoration:none;
+  padding-left:10px;
+  color: #fff;
+}
+#fourth a
+{
+    text-decoration:none;
+  color: #fff;
+}
+#fifth 
+{
+  font-family:'Arial Rounded MT';
+  display: block;
+  padding-bottom:10px;
+  font-size: 20px;
+  border-bottom:1px solid rgb(128, 128, 128);
+  text-decoration:none;
+  padding-left:10px;
+  color: #fff;
+}
+#fifth a
+{
+    text-decoration:none;
+  color: #fff;
+}
+#sixth 
+{
+  font-family:'Arial Rounded MT';
+  display: block;
+  padding-bottom:10px;
+  font-size: 20px;
+  border-bottom:1px solid rgb(128, 128, 128);
+  text-decoration:none;
+  padding-left:10px;
+  color: #fff;
+}
+#sixth a
+{
+    text-decoration:none;
+  color: #fff;
+}
+
+.dropdown-link
+{
+    line-height:50px;
+    color:white;  
+    font-size:20px;
+    border-bottom:1px solid rgb(128, 128, 128);
+    font-family:'Arial Rounded MT';
+    padding-left:10px;
+}
+.listcss 
+{
+     list-style-type:none;
+     
+}
+.listcss a
+{
+  font-family:'Arial Rounded MT';
+  display: block;
+  color: #fff;
+  padding:  14px ;
+  font-size: 17px;
+  text-decoration:none;
+   
+}
+#Mainpanel
+{
+    width:990px;
+    height:800px;
+    margin-left:10px;
+    float:left;
+}
+
+#heading
+{
+    width:100%;
+    height:40px;
+    background:#333;
+}
+#Main
+{
+    min-height:700px;
+}
+
+#img1 {
+    height: 100%;
+    width: 150px;
+    float: right;
+}

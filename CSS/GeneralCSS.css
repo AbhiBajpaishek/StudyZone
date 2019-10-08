@@ -1,0 +1,87 @@
+﻿#container
+{
+    min-height:700px;
+    width:100%;
+}
+#topmost
+{
+    height:20px;
+    width:100%;
+    background-color:#323945;
+}
+#top
+{
+    height:80px;
+    width:100%;
+}
+#logo
+{
+     height:100%;
+    width:200px;
+    float:left;
+    
+    
+}
+.logoimg
+{
+    margin-top:10px;
+    margin-left:60px;
+    height:70px;
+    width:200px;
+}
+#menu
+{
+    height:100%;
+    width:1132px;
+    float:left;
+    line-height:75px;
+    
+
+}
+#myTopnav{
+    height:50%;
+    width:800px;
+    margin-top:20px;
+   line-height:40px;
+    margin-left:175px;
+}
+.topnav {
+    overflow: hidden;
+   
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #64bc62;
+    text-align: center;
+    width:150px;
+    padding-left:10px;
+    font-family:'Arial Rounded MT';
+    text-decoration: none;
+    font-size: 17px;
+    
+}
+
+.topnav a:hover {
+    background-color: #323945;
+    color: white;
+    border-radius:10px;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#navigation
+{
+    min-height:0px;
+    width:100%;
+}
+#main
+{
+    min-height:400px;
+    width:100%;
+}

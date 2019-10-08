@@ -1,0 +1,13 @@
+﻿#s_outer
+{
+    width:100%;
+    height:660px;
+    
+}
+#s_main
+{
+    margin:0 auto;
+    margin-top:10px;
+    width:95%;
+    height:600px;
+}

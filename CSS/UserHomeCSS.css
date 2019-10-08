@@ -1,0 +1,50 @@
+﻿.MainPanel{
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+    width:30%;
+    float:left;
+    height:310px;
+    
+}
+
+
+.rightPanel {
+    height:310px;
+    float:right;
+    width:69%;
+    border-width:1px;
+    border-style:solid;
+    
+
+
+}
+
+
+.SecondPanel {
+    width: 100%;
+    border-width: 3px;
+    border-style: solid;
+}
+
+
+.headDiv {
+    font-size:19px
+}
+
+.links{
+
+}
+
+.img {
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+}
+
+.noti {
+    height: 500px;
+    width: 40%;
+    float: left;
+    background-color: aqua;
+}

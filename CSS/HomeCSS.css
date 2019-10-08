@@ -1,0 +1,96 @@
+﻿#outer
+{
+    height:700px;
+    width:100%;
+}
+.section1 {
+    height: 500px;
+    width: 100%;
+    background-image: url('../IMAGES/workplace.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.section1nested
+{
+    height: 500px;
+    width: 100%;
+    background-color:rgba(55,61,66,0.6);
+    text-align:center;
+    font-family:'Arial Rounded MT';
+    color:white;
+    font-size:22px;
+    
+}
+.section1content
+{
+    height: 300px;
+    width: 60%;
+    margin:0 auto;
+    padding-top:150px;
+}
+.section2
+{
+    height:200px;
+    width:100%;
+    background-color:#5dbe59;
+}
+.section2a
+{
+    height:80%;
+    width:30%;
+    text-align:center;
+    float:left;
+    padding:22px;
+    font-family:'Arial Rounded MT';
+    color:white;
+    font-size:20px;
+}
+.section2a img{
+    height:100px;
+    width:100px;
+}
+#content
+{
+    height:350px;
+    width:60%;
+    font-family:'Arial Rounded MT';
+    font-size:21px;
+    line-height:30px;
+    padding:10px;
+    color:#323945;
+    float:left;
+}
+#contentimage 
+{
+    float:left;
+    width:35%;
+    text-align:center;
+}
+.subject
+{
+    height:200px;
+    width:350px;
+    border:2px solid #5dbe59;
+    border-radius:5px;
+    float:left;
+    text-align:center;
+    padding-top:5px;
+
+}
+#notes,h3{
+    font-family:'Arial Rounded MT';
+}
+#notes{
+    border-bottom:2px solid #5dbe59;
+    padding-bottom:25px;
+}
+h3{
+    background-color:#5dbe59;
+}
+.sub
+{
+    width:100%;
+    height:28px;
+    background-color:#5dbe59;
+}

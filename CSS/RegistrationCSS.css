@@ -1,0 +1,71 @@
+﻿#Registrationouter
+{
+    width:100%;
+}
+#navi
+{
+    height:45px;
+    width:100%;
+    background-color:#64bc62;
+    color:white;
+    line-height:45px;
+    font-size:22px;
+    padding-left:5px;
+}
+#Registrationpannel
+{
+    box-shadow:1px 1px 3px 3px rgba(51,51,51,0.6);
+    height:761px;
+    width:898px;
+    padding:15px;
+    margin-bottom:10px;   
+    font-family:'Arial Rounded MT';
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+.txtbox
+{
+    height:30px;
+    width:375px;
+    margin-top:5px;
+}
+.btn
+{
+    height:40px;
+    width:375px;
+    background-color:#ffa000;
+    border:none;
+    font-family:'Arial Rounded MT'; 
+}
+.rfhbtn
+{
+    margin-left:25px;
+    height:35px;
+    width:100px;
+    background-color:#ffa000;
+    border:none;     
+}
+.dropdown
+{
+    height:40px;
+    width:375px;
+}
+.label
+{
+    font-size:15px;
+
+}
+.picfu
+{
+    margin-top:10px;
+    margin-left:250px;
+}
+.lblcaptcha
+{
+   margin-top:10px;
+    border:1px solid black;
+    margin-left:130px;
+    line-height:40px;
+}
