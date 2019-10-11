@@ -62,7 +62,7 @@
                <SortedDescendingCellStyle BackColor="#FFFDF8" />
                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
            </asp:GridView>
-           <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StudyZoneConnectionString8 %>" SelectCommand="SELECT * FROM [Tbl_Feedback]"></asp:SqlDataSource>
+           <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StudyZoneConnectionString %>" SelectCommand="SELECT * FROM [Tbl_Feedback]"></asp:SqlDataSource>
        </div>
             <div id="enquiry">
                 Enquiry Record
@@ -88,7 +88,7 @@
                     <SortedDescendingCellStyle BackColor="#FFFDF8" />
                     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StudyZoneConnectionString8 %>" SelectCommand="SELECT * FROM [Tbl_Enquiry]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StudyZoneConnectionString %>" SelectCommand="SELECT * FROM [Tbl_Enquiry]"></asp:SqlDataSource>
             </div>
             </div>
             <div id="two">
@@ -99,7 +99,7 @@
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
                         <asp:BoundField DataField="User_id" HeaderText="User_id" ReadOnly="True" SortExpression="User_id" />
-                        <asp:BoundField DataField="status" HeaderText="status" SortExpression="status" />
+                        <%--<asp:BoundField DataField="status" HeaderText="status" SortExpression="status" />--%>
                     </Columns>
                     <EditRowStyle BackColor="#999999" />
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -112,7 +112,7 @@
                     <SortedDescendingCellStyle BackColor="#FFFDF8" />
                     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:StudyZoneConnectionString8 %>" SelectCommand="SELECT [User_id], [status] FROM [Tbl_Login]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:StudyZoneConnectionString %>" SelectCommand="SELECT [User_id] FROM [Tbl_Login]"></asp:SqlDataSource>
             </div>
             </div>
     </div>
