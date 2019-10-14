@@ -11,7 +11,7 @@ using System.Web;
 /// </summary>
 public class DBAdmin
 {
-    SqlConnection con;// = new SqlConnection("Data Source=DESKTOP-JCFV4S8\\MSSQLSERVER01;Initial Catalog=StudyZone;Integrated Security=True");
+    SqlConnection con;
     public DBAdmin()
     {
         //
