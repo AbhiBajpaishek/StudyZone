@@ -25,20 +25,46 @@ StudyZone Database is used to store following details:
 Database Design:-
 
    *********************
-   * RegistrationTable *
+   * UserDataTable *
    *********************
 
-   Registration Table is used for storing relevant data of users/admins. All this data is stored at registration time.
-   This data will be used rarely hence credentails table has been separated as this table contains more data which won't be access very often in one session.
+   UserData Table is used for storing relevant data of users/admins. All this data is stored at registration time.
+   This data will be used rarely hence credentails table has been separated as this table contains more data  which won't be access very often in one session.
 
-	 - User Id (*Primary Key)
-	 - Name
-	 - Gender
-	 - Organisation/College
-	 - DOB
-	 - Image
-	 - Registration Date
-	 - Email Id
+	 - User Id (*Primary Key)    			 [int] {Auto Increment}
+	 - UserName                              			 [varchar(50)]
+	 - Gender    	             			 [char(1)]
+	 - Organisation/College ID (Foreign Key)  	 [int]
+	 - DOB					 [DATE]
+	 - ImageId					 [int]
+	 - Registration Date				 [DATE]
+	 - Email Id				 [varchar(50)]
+-------------------------------------------------------------------------------------------------------------------------
+   *********************
+   * OrganisationTable *
+   *********************
+  
+   Description:
+ 	
+      OrganisationTable stores organisations names with IDs.
+
+    - OrganisationId 					[int] {Auto Increment}
+    - OrganisationName				[varchar(50)]
+-------------------------------------------------------------------------------------------------------------------------
+ 
+   ****************
+   * ImageTable *
+   ****************
+  
+   Description:
+ 	
+      ImageTable stores images of users with Image IDs.
+
+    - ImageId	[int]{Auto increment}
+    - Image	[varbinary(max)]
+-------------------------------------------------------------------------------------------------------------------------
+
+
 
    **************
    * LoginTable *
@@ -47,13 +73,13 @@ Database Design:-
    Description: 
 
 	The Login Table is used for storing credentials, status and type of user/admins which can be used while logging in.
-	Email Id is Primary as each user will has its own unique email id and no two users can register on the same id.
+	User Id is Primary as each user will has its own unique user id and no two users can register on the same id.
 
-	- UserId(*Primary Key)
-	- Email Id
-	- User Type(Admin or User)
-	- Password
-	- Status (Active/Inactive)
+	- UserId(*Primary Key)			[int] {Auto Increment}
+	- Email Id					[varchar(50)]
+	- User Type(Admin or User)			[char(1)]
+	- Password				[varchar(50)]
+	- Status (Active/Inactive)			[char(1)]
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -65,11 +91,11 @@ Database Design:-
 
 	Document table stores documents uploaded by Admin. 
 
-	- DocumentId
-	- DocumentTitle
-	- CreatedBy
-	- CreationDate
-	- Downloads
+	- DocumentId				[int] {Auto Increment}	 \*Primary*/
+	- DocumentName				[varchar(50)]
+	- CreatedBy				[int]			\*Foreign*/
+	- CreationDate				[DATE]
+	- Downloads				[int(max)]
 
 ------------------------------------------------------------------------------------------------------------
    
@@ -82,8 +108,8 @@ Database Design:-
 	TopicsTable stores data of Topics(Subjects subscribed by users). Topics are categories which users subscribe 
 	to see documents related to their subscription.
 
-	 - TopicId
-	 - TopicName
+	 - TopicId					[int] {Auto Increment}
+	 - TopicName				[varchar(60)]
    
 -------------------------------------------------------------------------------------------------------------------
 
@@ -91,16 +117,15 @@ Database Design:-
    * DocumentTopicJunctionTable *
    ******************************
 
-	Description:
+    Description:
 	 
-	 DocumentTopicJunction table is created because of many 2 many relationship b/w Topics and Documents. Many
-	 documents may come under same Topic.
+	DocumentTopicJunction table is created because of many 2 many relationship b/w Topics and 			Documents. Many documents may come under same Topic.
 	 Many Topics may have same document.
 	 This table has composite primary key(TopicId, DocumentId) 
 
-	  - DocumentTopicId
-	  - DocumentId
-	  - TopicId
+	  - DocumentTopicId			[int]{Auto Increment}
+	  - DocumentId				[int]{*Foreign Key}
+	  - TopicId				[int]{*Foreign Key}
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -122,10 +147,10 @@ Database Design:-
 	Coming back to Subscription table, it is used for storing the combination of UserId and TopicId.
 	Working as junction table of Users and Topics.
 
-	 - Subscription ID
-	 - UserId (Composite Primary Key)
-	 - Topic Id (Composite Primary Key)
-	 - SubscriptionDate
+	 - Subscription ID					[int] 
+	 - UserId (Composite Primary Key)			[int]
+	 - Topic Id (Composite Primary Key)			[int]
+	 - SubscriptionDate					[DATE]
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -137,10 +162,10 @@ Database Design:-
 
     Feedback table has feedbacks given by users.
 
-	 - FeedbackId
-	 - UserId
-	 - Reviewed By
-	 - Date
+	 - FeedbackId					[int]{Auto Increment}
+	 - UserId						[int] {*Foreign Key}
+	 - Reviewed By					[int] {*Foreign Key}
+	 - Date						[DATE]
 
 -----------------------------------------------------------------------------------------------------------
 
