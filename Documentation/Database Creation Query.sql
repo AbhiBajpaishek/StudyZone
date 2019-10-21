@@ -23,6 +23,59 @@ RegistrationDate DATE,
 );
 
 
+create procedure InsertUserSP
+	@UserName varchar(255),
+	@EmailId varchar(255),
+	@Password varchar(255),
+	@Gender char(1),
+	@OrganisationName varchar(255),
+	@UserType char(1),
+	@Status char(1),
+	@DateOfBirth DATE,
+	@RegistrationDate DATE,
+	@Image varbinary(max)
+as
+begin
+	begin try
+		begin transaction;
+			--insert into ImageTable
+			
+			insert into ImageTable([Image]) values(@Image);
+			declare @ImageID int=SCOPE_IDENTITY();
+
+			--insert into OrganisationTable
+			
+			insert into OrganisationTable(OrganisationName) values(@OrganisationName);
+			declare @OrganisationID int=SCOPE_IDENTITY();
+
+			--insert into UserDataTable
+			insert into UserDataTable(UserName,Gender,OrganisationId,ImageId,DateOfBirth,RegistrationDate) values(@UserName,@Gender,@OrganisationID,@ImageID,@DateOfBirth,@RegistrationDate);
+			declare @UserId int=SCOPE_IDENTITY();
+
+			--insert into LoginTable
+			insert into LoginTable(UserId,EmailId,UserType,[Password],[Status]) values(@UserId,@EmailId,@UserType,@Password,@Status);
+
+		commit transaction;
+	end try
+	begin catch
+		if @@TRANCOUNT>0
+			ROLLBACK transaction;
+
+		DECLARE @ErrorNumber INT = ERROR_NUMBER();  
+		DECLARE @ErrorLine INT = ERROR_LINE();  
+		DECLARE @ErrorMessage NVARCHAR(4000) = ERROR_MESSAGE();
+ 
+	    PRINT 'Actual error number: ' + CAST(@ErrorNumber AS VARCHAR(10));  
+		PRINT 'Actual line number: ' + CAST(@ErrorLine AS VARCHAR(10)); 
+
+		RAISERROR(@ErrorMessage,@ErrorNumber,@ErrorLine); 
+   END CATCH  
+END;  
+
+
+
+
+
 create table LoginTable(
 UserId int foreign key references UserDataTable(UserId),
 EmailId varchar(255),
@@ -49,9 +102,10 @@ TopicName varchar(255)
 
 
 create table DocumentTopicJunctionTable(
-DocumentTopicId int identity(1,1) primary key,
+DocumentTopicId int identity(1,1) not null,
 DocumentId int foreign key references DocumentTable(DocumentId),
 TopicId int foreign key references TopicTable(TopicId)
+constraint PK_DocumentTopic Primary key(DocumentId,TopicId)
 );
 
 
@@ -68,4 +122,8 @@ UserId int foreign key references UserDataTable(UserId),
 ReviewedBy int foreign key references UserDataTable(UserId),
 FeedbackDate DATE 
 );
+
+
+
+
 
