@@ -55,10 +55,10 @@ public partial class GENERAL_Registration : System.Web.UI.Page
         DBAdmin db = new DBAdmin();
         if (Captcha_lbl.Text.Trim() == captcha_text.Text.Trim())
         {            
-            if (db.callingStoredProcedure(Name_txt.Text, Gender_list.SelectedValue, clg_name_txt.Text, course_dropdown.SelectedValue, year_list.SelectedValue, contact_txt.Text, picUploader.FileName, pass_text.Text, mail_txt.Text) == true)
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
-            else
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please Try again')", true);
+            //if (db.callingStoredProcedure(Name_txt.Text, Gender_list.SelectedValue, clg_name_txt.Text, course_dropdown.SelectedValue, year_list.SelectedValue, contact_txt.Text, picUploader.FileName, pass_text.Text, mail_txt.Text) == true)
+            //    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
+            //else
+            //    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please Try again')", true);
         }
         else
             Captcha_error.Text = "Please Enter Correct Captcha Code";

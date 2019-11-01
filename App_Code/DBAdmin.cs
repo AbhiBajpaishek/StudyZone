@@ -47,8 +47,7 @@ public class DBAdmin
         return false;
 
     }
-
-
+    
     public bool IUD(string command)
     {
         SqlCommand cmd = new SqlCommand(command, con);
@@ -63,7 +62,6 @@ public class DBAdmin
         else
             return false;
     }
-
 
     public DataTable ReadBulkData(string command)
     {
@@ -83,34 +81,25 @@ public class DBAdmin
         return cmd.ExecuteReader();
     }
 
-    //Stored procedure for registration submit
-
-    public bool callingStoredProcedure(string name, string gender, string clg_name, string course_name, string year, string contact,string pic, string pass, string mail)
+    public List<string> ReadOrganisations()
     {
-        SqlCommand cmd = new SqlCommand("register", con);
-        cmd.CommandType = CommandType.StoredProcedure;
-        cmd.Parameters.AddWithValue("@name", name);
-        cmd.Parameters.AddWithValue("@gender", gender);
-        cmd.Parameters.AddWithValue("@clg_name",clg_name);
-        cmd.Parameters.AddWithValue("@course",course_name);
-        cmd.Parameters.AddWithValue("@year",year);
-        cmd.Parameters.AddWithValue("@mail", mail);
-        cmd.Parameters.AddWithValue("@contact",contact);
-        cmd.Parameters.AddWithValue("@pic", pic);
-        cmd.Parameters.AddWithValue("@pass",pass);
-        cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString());
-        
+        List<string> org=new List<string>();
+        org.Add("Select Organisation");
+        string command = @"select OrganisationName from OrganisationTable";
+        SqlCommand cmd = new SqlCommand(command,con);
         if (con.State == ConnectionState.Closed)
-        {
             con.Open();
+        SqlDataReader dr = cmd.ExecuteReader();
+        while(dr.HasRows)
+        {
+            org.Add(dr.GetString(0));
         }
-        int res = cmd.ExecuteNonQuery();
+        org.Add("Others");
         con.Close();
-        if (res > 0)
-            return true;
-        else
-            return false;
+        return org;
+
     }
+    
 
     //Stored Procedure for Discussion Board 
     public bool reply(String name,String msg,String thread,int count)
