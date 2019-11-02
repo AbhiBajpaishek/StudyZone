@@ -87,4 +87,16 @@ public partial class GENERAL_UserRegistration : System.Web.UI.Page
             textBoxOtherOrganisations.Enabled = false;
         }
     }
+
+    protected void dropDownMonth_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        dropDownDate.DataSource = GetDays(Convert.ToInt32(dropDownYear.SelectedValue), GetMonths(), dropDownMonth.SelectedValue);
+        dropDownDate.DataBind();
+    }
+
+    protected void textBoxName_TextChanged(object sender, EventArgs e)
+    {
+        if (textBoxName.Text == "") ;
+            
+    }
 }

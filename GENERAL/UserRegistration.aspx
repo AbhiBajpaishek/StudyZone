@@ -10,22 +10,37 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="CPHmain" runat="Server">
     <div id="registrationPanelDiv">
+        <div>
+            <asp:ScriptManager ID="scriptManager" runat="server">
+            </asp:ScriptManager>
+        </div>
         <div id="registrationFormDiv">
             <div id="nameDiv">
-                <asp:Label ID="labelName" runat="server" Text="Enter Your Name"></asp:Label>
-                <asp:TextBox ID="textBoxName" runat="server" placeholder="Enter Your Name"></asp:TextBox>
+                <asp:UpdatePanel ID="updatePanelName" runat="server">
+                    <ContentTemplate>
+                        <asp:Label ID="labelName" runat="server" Text="Enter Your Name"></asp:Label>
+                        <asp:TextBox ID="textBoxName" runat="server" placeholder="Enter Your Name" OnTextChanged="textBoxName_TextChanged"></asp:TextBox>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </div>
+
             <div id="emailDiv">
                 <asp:Label ID="labelEmail" runat="server" Text="Enter Your Email"></asp:Label>
                 <asp:TextBox ID="textBoxEmail" runat="server" placeholder="Enter Your Email"></asp:TextBox>
             </div>
+
             <div id="dobDiv">
                 <div>
-                    <asp:Label ID="labelDob" runat="server" Text="Date Of Birth"></asp:Label></div>
+                    <asp:Label ID="labelDob" runat="server" Text="Date Of Birth"></asp:Label>
+                </div>
                 <span id="spanDob">
-                    <asp:DropDownList ID="dropDownDate" runat="server"></asp:DropDownList>
-                    <asp:DropDownList ID="dropDownMonth" runat="server"></asp:DropDownList>
-                    <asp:DropDownList ID="dropDownYear" runat="server"></asp:DropDownList>
+                    <asp:UpdatePanel ID="updatePanelDob" runat="server">
+                        <ContentTemplate>
+                            <asp:DropDownList ID="dropDownDate" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="dropDownMonth" runat="server" AutoPostBack="true" OnSelectedIndexChanged="dropDownMonth_SelectedIndexChanged"></asp:DropDownList>
+                            <asp:DropDownList ID="dropDownYear" runat="server"></asp:DropDownList>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
                 </span>
             </div>
 
@@ -35,11 +50,18 @@
                     <asp:Label ID="labelOrganisation" runat="server" Text="Select your organisation"></asp:Label>
                 </div>
                 <div>
-                    <asp:DropDownList ID="dropDownOrganisation" runat="server" OnSelectedIndexChanged="dropDownOrganisation_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
-                    <span><asp:TextBox ID="textBoxOtherOrganisations" runat="server" Enabled="false" placeholder="Please Specify..."></asp:TextBox></span>
+                    <asp:UpdatePanel ID="updatePanelOrganisation" runat="server">
+                        <ContentTemplate>
+                            <asp:DropDownList ID="dropDownOrganisation" runat="server" OnSelectedIndexChanged="dropDownOrganisation_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
+                            <span>
+                                <asp:TextBox ID="textBoxOtherOrganisations" runat="server" Enabled="false" placeholder="Please Specify..."></asp:TextBox>
+                            </span>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
                 </div>
 
             </div>
+
 
         </div>
     </div>
