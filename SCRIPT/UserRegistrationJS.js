@@ -1,8 +1,3 @@
-﻿function onLoad() {
-
-}
-
-function loadDate() {
-    var i;
-    for (i = 1; i < 30; i++) { };
+﻿function check(obj) {
+    alert(obj.value);
 }

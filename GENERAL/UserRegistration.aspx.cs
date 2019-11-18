@@ -11,8 +11,11 @@ public partial class GENERAL_UserRegistration : System.Web.UI.Page
    
     protected void Page_Load(object sender, EventArgs e)
     {
-        if(!IsPostBack)
-        DateOfBirthFill();
+        if (!IsPostBack)
+        {
+            DateOfBirthFill();
+            HideErrorMsg();
+        }
     }
 
     public void DateOfBirthFill()
@@ -94,9 +97,9 @@ public partial class GENERAL_UserRegistration : System.Web.UI.Page
         dropDownDate.DataBind();
     }
 
-    protected void textBoxName_TextChanged(object sender, EventArgs e)
+    private void HideErrorMsg()
     {
-        if (textBoxName.Text == "") ;
-            
+        errorIcon.Visible = false;
     }
+
 }

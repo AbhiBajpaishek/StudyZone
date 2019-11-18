@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="../CSS/UserRegistrationCSS.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/21c837db17.js"></script>
+    <script src="../SCRIPT/UserRegistrationJS.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPHnavigation" runat="Server">
     <div id="navi">
@@ -19,7 +21,9 @@
                 <asp:UpdatePanel ID="updatePanelName" runat="server">
                     <ContentTemplate>
                         <asp:Label ID="labelName" runat="server" Text="Enter Your Name"></asp:Label>
-                        <asp:TextBox ID="textBoxName" runat="server" placeholder="Enter Your Name" OnTextChanged="textBoxName_TextChanged"></asp:TextBox>
+                        <asp:TextBox ID="textBoxName" runat="server" placeholder="Enter Your Name" onBlur="javascript:check(this)"></asp:TextBox>
+                        <i class="fa fa-exclamation-circle errorSign" runat="server" id="errorIcon"></i>
+                        <asp:RequiredFieldValidator ID="textNameValidator" runat="server" ControlToValidate="textBoxName" ErrorMessage="Enter name" ForeColor="Red" EnableClientScript="true"></asp:RequiredFieldValidator>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
@@ -45,7 +49,6 @@
             </div>
 
             <div id="organisationDiv">
-
                 <div>
                     <asp:Label ID="labelOrganisation" runat="server" Text="Select your organisation"></asp:Label>
                 </div>
@@ -59,10 +62,7 @@
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>
-
             </div>
-
-
         </div>
     </div>
 </asp:Content>
