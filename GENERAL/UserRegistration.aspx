@@ -18,7 +18,7 @@
         </div>
         <div id="registrationFormDiv">
             <div id="nameDiv">
-                <asp:UpdatePanel ID="updatePanelName" runat="server">
+                <asp:UpdatePanel ID="updatePanelName" UpdateMode="Conditional" runat="server">
                     <ContentTemplate>
                         <asp:Label ID="labelName" runat="server" Text="Enter Your Name"></asp:Label>
                         <asp:TextBox ID="textBoxName" runat="server" placeholder="Enter Your Name" onBlur="check(this)"></asp:TextBox>
@@ -38,7 +38,7 @@
                     <asp:Label ID="labelDob" runat="server" Text="Date Of Birth"></asp:Label>
                 </div>
                 <span id="spanDob">
-                    <asp:UpdatePanel ID="updatePanelDob" runat="server">
+                    <asp:UpdatePanel ID="updatePanelDob" UpdateMode="Conditional" runat="server">
                         <ContentTemplate>
                             <asp:DropDownList ID="dropDownDate" runat="server"></asp:DropDownList>
                             <asp:DropDownList ID="dropDownMonth" runat="server" AutoPostBack="true" OnSelectedIndexChanged="dropDownMonth_SelectedIndexChanged"></asp:DropDownList>
