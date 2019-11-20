@@ -21,9 +21,9 @@
                 <asp:UpdatePanel ID="updatePanelName" runat="server">
                     <ContentTemplate>
                         <asp:Label ID="labelName" runat="server" Text="Enter Your Name"></asp:Label>
-                        <asp:TextBox ID="textBoxName" runat="server" placeholder="Enter Your Name" onBlur="javascript:check(this)"></asp:TextBox>
-                        <i class="fa fa-exclamation-circle errorSign" runat="server" id="errorIcon"></i>
-                        <asp:RequiredFieldValidator ID="textNameValidator" runat="server" ControlToValidate="textBoxName" ErrorMessage="Enter name" ForeColor="Red" EnableClientScript="true"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="textBoxName" runat="server" placeholder="Enter Your Name" onBlur="check(this)"></asp:TextBox>
+                        <i class="fa fa-exclamation-circle errorSign hiddenItem" id="errorIcon" onclick="showError(this)" runat="server"></i>
+                        <asp:Label ID="labelNameError" runat="server" CssClass="errorMsg hiddenItem" Text="Name can't be blank" ForeColor="Red"></asp:Label>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>

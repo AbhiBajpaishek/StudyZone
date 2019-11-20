@@ -14,7 +14,7 @@ public partial class GENERAL_UserRegistration : System.Web.UI.Page
         if (!IsPostBack)
         {
             DateOfBirthFill();
-            HideErrorMsg();
+            
         }
     }
 
@@ -97,9 +97,6 @@ public partial class GENERAL_UserRegistration : System.Web.UI.Page
         dropDownDate.DataBind();
     }
 
-    private void HideErrorMsg()
-    {
-        errorIcon.Visible = false;
-    }
+    
 
 }

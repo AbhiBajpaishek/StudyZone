@@ -40,16 +40,25 @@ input[type=text] {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+
 .errorSign{
     position:absolute;
     margin-right:30px;
     left:1050px;
     top:220px;
-    visibility:hidden;
 }
 
+.errorMsg{
+    position:absolute;
+    margin-right:60px;
+    left:900px;
+    top:220px;
+}
 
-
+.hiddenItem {
+    visibility: hidden;
+}
 
 select {
     padding: 12px 20px;

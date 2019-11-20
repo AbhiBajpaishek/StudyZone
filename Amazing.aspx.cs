@@ -68,9 +68,9 @@ public partial class Amazing : System.Web.UI.Page
         }
         //while (c>0)
         //{
-            
-        //    //threadlbl.Text = "Thread Id ";
-        //    //threadTxt.Text=dt.Rows[][]
+
+        //threadlbl.Text = "Thread Id ";
+        //threadTxt.Text=dt.Rows[][]
 
         //}
         //threadTxt.Text = dt.Rows[0][0].ToString();
