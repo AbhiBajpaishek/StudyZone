@@ -18,19 +18,21 @@
         </div>
         <div id="registrationFormDiv">
             <div id="nameDiv">
-                <asp:UpdatePanel ID="updatePanelName" UpdateMode="Conditional" runat="server">
-                    <ContentTemplate>
+                <%--<asp:UpdatePanel ID="updatePanelName" UpdateMode="Conditional" runat="server">
+                    <ContentTemplate>--%>
                         <asp:Label ID="labelName" runat="server" Text="Enter Your Name"></asp:Label>
-                        <asp:TextBox ID="textBoxName" runat="server" placeholder="Enter Your Name" onBlur="check(this)"></asp:TextBox>
-                        <i class="fa fa-exclamation-circle errorSign hiddenItem" id="errorIcon" onclick="showError(this)" runat="server"></i>
-                        <asp:Label ID="labelNameError" runat="server" CssClass="errorMsg hiddenItem" Text="Name can't be blank" ForeColor="Red"></asp:Label>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
+                        <asp:TextBox ID="textBoxName" runat="server" placeholder="Enter Your Name" onBlur="checkName(this)"></asp:TextBox>
+                        <i class="fa fa-exclamation-circle errorNameSign hiddenItem" onclick="showError(this)" runat="server"></i>
+                        <asp:Label ID="labelNameError" runat="server" CssClass="errorNameMsg hiddenItem" Text="Name can't be blank!!" ForeColor="Red"></asp:Label>
+                   <%-- </ContentTemplate>
+                </asp:UpdatePanel>--%>
             </div>
 
             <div id="emailDiv">
                 <asp:Label ID="labelEmail" runat="server" Text="Enter Your Email"></asp:Label>
-                <asp:TextBox ID="textBoxEmail" runat="server" placeholder="Enter Your Email"></asp:TextBox>
+                <asp:TextBox ID="textBoxEmail" runat="server" placeholder="Enter Your Email" onBlur="checkEmail(this)"></asp:TextBox>
+                <i class="fa fa-exclamation-circle errorEmailSign hiddenItem" onclick="showError(this)" runat="server"></i>
+                <asp:Label ID="labelEmailError" runat="server" CssClass="errorEmailMsg hiddenItem" Text="Email is not valid!!" ForeColor="Red"></asp:Label>
             </div>
 
             <div id="dobDiv">
@@ -42,7 +44,7 @@
                         <ContentTemplate>
                             <asp:DropDownList ID="dropDownDate" runat="server"></asp:DropDownList>
                             <asp:DropDownList ID="dropDownMonth" runat="server" AutoPostBack="true" OnSelectedIndexChanged="dropDownMonth_SelectedIndexChanged"></asp:DropDownList>
-                            <asp:DropDownList ID="dropDownYear" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="dropDownYear" runat="server" AutoPostBack="true" OnSelectedIndexChanged="dropDownYear_SelectedIndexChanged"></asp:DropDownList>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </span>
@@ -53,7 +55,7 @@
                     <asp:Label ID="labelOrganisation" runat="server" Text="Select your organisation"></asp:Label>
                 </div>
                 <div>
-                    <asp:UpdatePanel ID="updatePanelOrganisation" runat="server">
+                    <asp:UpdatePanel ID="updatePanelOrganisation" UpdateMode="Conditional" runat="server">
                         <ContentTemplate>
                             <asp:DropDownList ID="dropDownOrganisation" runat="server" OnSelectedIndexChanged="dropDownOrganisation_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
                             <span>

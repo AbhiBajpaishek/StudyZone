@@ -14,8 +14,6 @@
 }
 
 
-
-
 .registrationFormFieldDiv {
     border: 2px solid blue;
 }                    
@@ -42,18 +40,32 @@ input[type=text] {
 }
 
 
-.errorSign{
+.errorNameSign{
     position:absolute;
     margin-right:30px;
     left:1050px;
     top:220px;
 }
 
-.errorMsg{
+.errorEmailSign {
+    position: absolute;
+    margin-right: 30px;
+    left: 1050px;
+    top: 295px;
+}
+
+.errorNameMsg{
     position:absolute;
     margin-right:60px;
     left:900px;
     top:220px;
+}
+
+.errorEmailMsg {
+    position: absolute;
+    margin-right: 60px;
+    left: 900px;
+    top: 295px;
 }
 
 .hiddenItem {

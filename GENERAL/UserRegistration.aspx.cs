@@ -97,6 +97,13 @@ public partial class GENERAL_UserRegistration : System.Web.UI.Page
         dropDownDate.DataBind();
     }
 
-    
+    protected void dropDownYear_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        dropDownDate.DataSource = GetDays(Convert.ToInt32(dropDownYear.SelectedValue), GetMonths(), dropDownMonth.SelectedValue);
+        dropDownDate.DataBind();
+    }
+
+
+
 
 }
