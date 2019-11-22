@@ -41,34 +41,40 @@ input[type=text] {
 
 
 .errorNameSign{
-    position:absolute;
-    margin-right:30px;
     left:1050px;
     top:220px;
 }
 
 .errorEmailSign {
-    position: absolute;
-    margin-right: 30px;
     left: 1050px;
     top: 295px;
 }
 
-.errorNameMsg{
-    position:absolute;
-    margin-right:60px;
-    left:900px;
-    top:220px;
+.errorOrganisationSign {
+    left: 1050px;
+    top: 505px;
+}
+
+.errorNameMsg {
+    margin-right: 60px;
+    left: 900px;
+    top: 220px;
 }
 
 .errorEmailMsg {
-    position: absolute;
     margin-right: 60px;
     left: 900px;
     top: 295px;
 }
 
+.errorOrganisationMsg {
+    margin-right: 60px;
+    left: 820px;
+    top: 505px;
+}
+
 .hiddenItem {
+    position:absolute;
     visibility: hidden;
 }
 
@@ -79,8 +85,6 @@ select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-
 
 input[type=submit] {
     width: 100%;

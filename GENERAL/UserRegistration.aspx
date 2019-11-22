@@ -31,7 +31,7 @@
             <div id="emailDiv">
                 <asp:Label ID="labelEmail" runat="server" Text="Enter Your Email"></asp:Label>
                 <asp:TextBox ID="textBoxEmail" runat="server" placeholder="Enter Your Email" onBlur="checkEmail(this)"></asp:TextBox>
-                <i class="fa fa-exclamation-circle errorEmailSign hiddenItem" onclick="showError(this)" runat="server"></i>
+                <i class="fa fa-exclamation-circle errorEmailSign hiddenItem" onclick="showError(this)"></i>
                 <asp:Label ID="labelEmailError" runat="server" CssClass="errorEmailMsg hiddenItem" Text="Email is not valid!!" ForeColor="Red"></asp:Label>
             </div>
 
@@ -42,9 +42,9 @@
                 <span id="spanDob">
                     <asp:UpdatePanel ID="updatePanelDob" UpdateMode="Conditional" runat="server">
                         <ContentTemplate>
-                            <asp:DropDownList ID="dropDownDate" runat="server"></asp:DropDownList>
-                            <asp:DropDownList ID="dropDownMonth" runat="server" AutoPostBack="true" OnSelectedIndexChanged="dropDownMonth_SelectedIndexChanged"></asp:DropDownList>
                             <asp:DropDownList ID="dropDownYear" runat="server" AutoPostBack="true" OnSelectedIndexChanged="dropDownYear_SelectedIndexChanged"></asp:DropDownList>
+                            <asp:DropDownList ID="dropDownMonth" runat="server" AutoPostBack="true" OnSelectedIndexChanged="dropDownMonth_SelectedIndexChanged"></asp:DropDownList>
+                            <asp:DropDownList ID="dropDownDate" runat="server"></asp:DropDownList>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </span>
@@ -58,9 +58,9 @@
                     <asp:UpdatePanel ID="updatePanelOrganisation" UpdateMode="Conditional" runat="server">
                         <ContentTemplate>
                             <asp:DropDownList ID="dropDownOrganisation" runat="server" OnSelectedIndexChanged="dropDownOrganisation_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
-                            <span>
-                                <asp:TextBox ID="textBoxOtherOrganisations" runat="server" Enabled="false" placeholder="Please Specify..."></asp:TextBox>
-                            </span>
+                            <asp:TextBox ID="textBoxOtherOrganisations" runat="server" Enabled="false" placeholder="Please Specify..." onBlur="checkOrganisation(this)"></asp:TextBox>
+                            <i class="fa fa-exclamation-circle errorOrganisationSign hiddenItem" onclick="showError(this)"></i>
+                            <asp:Label ID="labelOrganisationError" runat="server" CssClass="errorOrganisationMsg hiddenItem" Text="Organisation Name is not valid!!" ForeColor="Red"></asp:Label>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>

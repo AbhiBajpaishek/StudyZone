@@ -2,26 +2,32 @@
     var errIcon = txtBox.nextElementSibling;
     var errName = errIcon.nextElementSibling;
     if (isValid) {
-        txtBox.style.borderColor = "Red";
-        errIcon.style.visibility = "visible";
-    }
-    else {
         txtBox.style.borderColor = "";
         errIcon.style.visibility = "hidden";
         errName.style.visibility = "hidden";
+    }
+    else {
+        txtBox.style.borderColor = "Red";
+        errIcon.style.visibility = "visible";
+        errIcon.focus();
     }
 }
 
 function checkName(txtBoxName) {
     txt = txtBoxName.value;
-    hideShowIconError(txt.length < 1,txtBoxName);
+    hideShowIconError(txt.length > 0,txtBoxName);
 }
 
 function checkEmail(txtBoxEmail) {
-    var patt = new RegExp("\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z");
-    var isEmail = patt.test(txtBoxEmail);
-    var errIcon = txtBoxEmail.nextElementSibling;
-    hideShowIconError(isEmail || txtBoxEmail.value.length<1, txtBoxEmail);
+    var patt = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+    var txt = txtBoxEmail.value;
+    var isEmail = patt.test(txt);
+    hideShowIconError(isEmail && txt.length>1, txtBoxEmail);
+}
+
+function checkOrganisation(txtBoxOrg) {
+    txt = txtBoxOrg.value;
+    hideShowIconError(txt.length > 0, txtBoxOrg);
 }
 
 function showError(errIcon) {
