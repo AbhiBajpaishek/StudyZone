@@ -19,21 +19,17 @@
         </div>
         <div id="registrationFormDiv">
             <div id="nameDiv">
-                <%--<asp:UpdatePanel ID="updatePanelName" UpdateMode="Conditional" runat="server">
-                    <ContentTemplate>--%>
                 <asp:Label ID="labelName" runat="server" CssClass="labelClass" Text="Enter Your Name"></asp:Label>
                 <asp:TextBox ID="textBoxName" runat="server" placeholder="Enter Your Name" onBlur="checkName(this)"></asp:TextBox>
                 <i class="fa fa-exclamation-circle errorNameSign hiddenItem" onclick="showError(this)" runat="server"></i>
-                <asp:Label ID="labelNameError" runat="server" CssClass="errorNameMsg hiddenItem" Text="Name can't be blank!!" ForeColor="Red"></asp:Label>
-                <%-- </ContentTemplate>
-                </asp:UpdatePanel>--%>
+                <asp:Label ID="labelNameError" runat="server" CssClass="errorNameMsg hiddenItem" Text="Name can't be blank!!"></asp:Label>
             </div>
 
             <div id="emailDiv">
                 <asp:Label ID="labelEmail" runat="server" Text="Enter Your Email"></asp:Label>
                 <asp:TextBox ID="textBoxEmail" runat="server" placeholder="Enter Your Email" onBlur="checkEmail(this)"></asp:TextBox>
                 <i class="fa fa-exclamation-circle errorEmailSign hiddenItem" onclick="showError(this)"></i>
-                <asp:Label ID="labelEmailError" runat="server" CssClass="errorEmailMsg hiddenItem" Text="Email is not valid!!" ForeColor="Red"></asp:Label>
+                <asp:Label ID="labelEmailError" runat="server" CssClass="errorEmailMsg hiddenItem" Text="Email is not valid!!"></asp:Label>
             </div>
 
             <div id="dobDiv">
@@ -61,7 +57,7 @@
                             <asp:DropDownList ID="dropDownOrganisation" runat="server" OnSelectedIndexChanged="dropDownOrganisation_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
                             <asp:TextBox ID="textBoxOtherOrganisations" runat="server" Enabled="false" placeholder="Please Specify..." onBlur="checkOrganisation(this)"></asp:TextBox>
                             <i class="fa fa-exclamation-circle errorOrganisationSign hiddenItem" onclick="showError(this)"></i>
-                            <asp:Label ID="labelOrganisationError" runat="server" CssClass="errorOrganisationMsg hiddenItem" Text="Organisation Name is not valid!!" ForeColor="Red"></asp:Label>
+                            <asp:Label ID="labelOrganisationError" runat="server" CssClass="errorOrganisationMsg hiddenItem" Text="Organisation Name is not valid!!"></asp:Label>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>
@@ -91,7 +87,12 @@
                         <asp:UpdatePanel ID="updatePanelCaptcha" runat="server" UpdateMode="Conditional">
                             <ContentTemplate>
                                 <asp:Label ID="labelCaptchaCode" runat="server" Text="JHGF5Dfdg" CssClass="captcha"></asp:Label>
-                                <i class="fas fa-redo fa-2x refreshSign" runat="server"></i>
+                                <i class="fas fa-redo fa-2x refreshSign" runat="server" onclick="checkCaptchaError(this)"></i>
+                                <div id="captchaTextDiv">
+                                    <asp:TextBox ID="textBoxCaptcha" runat="server" placeholder="Enter above text here" onBlur="checkCaptcha(this)"></asp:TextBox>
+                                    <i class="fa fa-exclamation-circle errorCaptchaSign hiddenItem" runat="server" onclick="showError(this)"></i>
+                                    <asp:Label ID="labelCaptchaError" CssClass="errorCaptchaMsg hiddenItem" runat="server" Text="Wrong Captcha"></asp:Label>
+                                </div>
                             </ContentTemplate>
                         </asp:UpdatePanel>
                     </asp:Panel>

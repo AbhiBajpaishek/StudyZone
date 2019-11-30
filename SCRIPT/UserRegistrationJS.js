@@ -30,6 +30,15 @@ function checkOrganisation(txtBoxOrg) {
     hideShowIconError(txt.length > 0, txtBoxOrg);
 }
 
+function checkCaptcha(txtBoxCaptcha) {
+    txt = txtBoxCaptcha.value;
+    hideShowIconError(txt.length > 0, txtBoxCaptcha);
+}
+
+function checkCaptchaError(){
+
+}
+
 function showError(errIcon) {
     var errMsg = errIcon.nextElementSibling;
     if (errMsg.style.visibility === "hidden")
@@ -37,4 +46,5 @@ function showError(errIcon) {
     else
         errMsg.style.visibility = "hidden";
 }
+
 
