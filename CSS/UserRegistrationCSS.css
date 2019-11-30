@@ -39,6 +39,14 @@ input[type=text] {
     box-sizing: border-box;
 }
 
+input[type=radio] {
+    width: 20px;
+    height: 15px;
+    margin:15px 5px;
+    font-size:30px;
+    background-color:white;
+}
+
 
 .errorNameSign{
     left:1050px;
@@ -53,6 +61,15 @@ input[type=text] {
 .errorOrganisationSign {
     left: 1050px;
     top: 505px;
+}
+
+.refreshSign {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: 850px;
+    top: 685px;
+    color: #64bc62;
 }
 
 .errorNameMsg {
@@ -78,7 +95,7 @@ input[type=text] {
     visibility: hidden;
 }
 
-select {
+select{
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid #ccc;
@@ -99,7 +116,34 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: #45a049;
-}    
+}
+
+.panelGender {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 3px 5px;
+    margin: 8px 0;
+}
+
+.captcha {
+    font-size:35px;
+    font-style:italic;
+    font-display:fallback;
+    text-decoration:line-through;
+
+}
+
+.panelCaptcha {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 15px;
+    margin:8px 0;
+    background-color:white;
+}
+
 
 
 
